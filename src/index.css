@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans JP', 'Noto Sans Myanmar', system-ui, -apple-system, sans-serif;
+  --font-jp: 'Noto Sans JP', 'Noto Sans Myanmar', 'Plus Jakarta Sans', sans-serif;
+  --font-mm: 'Noto Sans Myanmar', 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Noto Sans JP', 'Noto Sans Myanmar', monospace;
+  --app-bg: #f8fafc;
+  --app-card: #ffffff;
+  --app-sub: #f1f5f9;
+  --app-border: #e2e8f0;
+  --app-text: #0f172a;
+  --app-muted: #475569;
+  --app-accent: #0284c7;
+}
+
+html.dark {
+  --app-bg: #0f172a;
+  --app-card: #1e293b;
+  --app-sub: #0f172a;
+  --app-border: #334155;
+  --app-text: #f8fafc;
+  --app-muted: #cbd5e1;
+  --app-accent: #38bdf8;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--app-bg) !important;
+  color: var(--app-text) !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.app-canvas {
+  background-color: var(--app-bg) !important;
+  color: var(--app-text) !important;
+}
+
+.app-header {
+  background-color: var(--app-bg) !important;
+  border-color: var(--app-border) !important;
+  color: var(--app-text) !important;
+}
+
+.app-card {
+  background-color: var(--app-card) !important;
+  border-color: var(--app-border) !important;
+  color: var(--app-text) !important;
+}
+
+.app-subcard {
+  background-color: var(--app-sub) !important;
+  border-color: var(--app-border) !important;
+  color: var(--app-text) !important;
+}
+
+.app-muted {
+  color: var(--app-muted) !important;
+}
+
+.font-jp {
+  font-family: var(--font-jp);
+}
+
+.font-mm {
+  font-family: var(--font-mm);
+  line-height: 1.75;
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3D Flashcard Flip Utilities */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preserve-3d {
+    transition: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Speed Master JLPT N3 Kanji — မြန်မာဘာသာဖြင့် N3 ခန်းဂျီး ၄၀၅ လုံး",
+  "description": "Complete JLPT N3 Kanji Mastery Web Application (405 Kanji from Speed Master N3) with Myanmar translations, trilingual search, active recall toggles, Japanese speech synthesis, stroke visualizer, 3D flashcards, and JLPT N3 mock exam engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
